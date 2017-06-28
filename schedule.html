@@ -1,0 +1,477 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>ISELTech'17</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="theme-color" content="#6dbd44">
+    <!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/schedule.css" />
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/accordion.min.css">
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="../assets/css/ie8.css" />
+      <![endif]-->
+    <!--[if lte IE 9]>
+      <link rel="stylesheet" href="../assets/css/ie9.css" />
+      <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,900" rel="stylesheet">
+    <style type="text/css">
+    .button {
+        color: black;
+    }
+    #blog > header {
+        padding: 12em 0 10em 0;
+        background-image: url("images/banner_sch.jpg");
+        background-image: url("images/banner_sch.jpg");
+        background-image: url("images/banner_sch.jpg");
+        background-image: url("images/banner_sch.jpg");
+    }
+    </style>
+<style>
+
+    small {
+        color: rgba(96, 96, 96, 0.8);
+        font-weight: 500;
+    }
+    
+    .white {
+        color: #fff;
+    }
+    
+    .collapse {
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 5px rgb(51, 51, 51);
+        box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+        margin: 0px 0px 20px;
+        padding-left: 2%;
+        padding-right: 2%;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    
+    .container {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        color: #606060;
+    }
+    
+    .black {
+        color: rgba(96, 96, 96, 0.8);
+    }
+    
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .overlay {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: .5s ease;
+        opacity: 0.95;
+        filter: alpha(opacity=95);
+        /* For IE8 and earlier */
+    }
+    
+    .container:hover .overlay {
+        bottom: 0;
+        height: 100%;
+    }
+    
+    .text {
+        white-space: nowrap;
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+    
+    .col-lg-4,
+    .col-md-4,
+    .col-sm-3,
+    .col-xs-12 {
+        padding-bottom: 7px;
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+    
+    .mid {
+        margin-left: 280px;
+        margin-bottom: 50px;
+        margin-top: -50px;
+        margin-bottom: 50px;
+    }
+    
+    .wrapper {
+        margin-top: -50px;
+        margin-bottom: -50px;
+    }
+    
+    @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+    @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+    body {
+        padding: 0px 0px;
+        background-color: rgb(220, 220, 220);
+    }
+    
+    .event-list {
+        list-style: none;
+        font-family: 'Lato', sans-serif;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .event-list > li {
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 5px rgb(51, 51, 51);
+        box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+        padding: 0px;
+        margin: 0px 0px 20px;
+    }
+    
+    .event-list > li > time {
+        display: inline-block;
+        width: 100%;
+        color: rgb(255, 255, 255);
+        background-color: #299529;
+        padding: 5px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .ciber > li > time {
+        background-color: #351BA3;
+    }
+    
+    .event-list > li:nth-child(2n) > time {
+        background-color: #e52e1e;
+    }
+    
+    .event-list > li:nth-child(3n) > time {
+        background-color: #ffc20b;
+    }
+    
+    .event-list > li:nth-child(2n-1) > time {
+        background-color: #4588f6;
+    }
+    
+    .event-list > li:nth-child(3n-1) > time {
+        background-color: #159f5c;
+    }
+    
+    .event-list > li > time > span {
+        display: none;
+    }
+    
+    .event-list > li > time > .time {
+        padding-top: 10%;
+        display: block;
+        font-size: 30pt;
+        font-weight: 100;
+        line-height: 1;
+    }
+    
+    .event-list > li time > .pmam {
+        display: block;
+        font-size: 24pt;
+        font-weight: 900;
+        line-height: 1;
+    }
+    
+    .event-list > li time > .lang {
+        display: block;
+        font-size: 10pt;
+        font-weight: 900;
+        line-height: 3;
+    }
+    
+    .event-list > li > img {
+        width: 100%;
+    }
+    
+    .event-list > li > .info {
+        padding-top: 5px;
+        text-align: center;
+    }
+    
+    .event-list > li > .info > .title {
+        font-size: 16pt;
+        font-weight: 500;
+        margin: 0px;
+    }
+    
+    .event-list > li > .info > .desc {
+        font-size: 13pt;
+        font-weight: 300;
+        margin: 0px;
+    }
+    
+    .event-list > li > .info > ul {
+        display: table;
+        list-style: none;
+        margin: 10px 0px 0px;
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .event-list > li > .info > ul > li {
+        display: table-cell;
+        cursor: pointer;
+        color: rgb(30, 30, 30);
+        font-size: 11pt;
+        font-weight: 300;
+        padding: 3px 0px;
+    }
+    
+    .event-list > li > .info > ul > li > a {
+        display: block;
+        width: 100%;
+        color: rgb(30, 30, 30);
+        text-decoration: none;
+    }
+    
+    .event-list > li > .social > ul > li {
+        padding: 0px;
+    }
+    
+    .event-list > li > .social > ul > li > a {
+        padding: 3px 0px;
+    }
+    
+    .event-list > li > .info > ul > li:hover {
+        color: rgb(30, 30, 30);
+        background-color: rgb(200, 200, 200);
+    }
+    
+    .event-list > li > .workshop {
+        background-color: #FCDBDB;
+        overflow: hidden;
+    }
+    
+    .event-list > li > .iselt {
+        background-image: url("images/schedule/banner.jpg");
+        overflow: hidden;
+    }
+
+        .event-list > li > .ciber {
+        background-image: url("images/schedule/banner272.jpg");
+        overflow: hidden;
+    }
+            .event-list > li > .debate {
+        background-image: url("images/schedule/banner271.jpg");
+        overflow: hidden;
+    }
+    @media (max-width: 768px) {
+        .event-list > li > img {
+            display: none;
+        }
+    }
+    
+    @media (min-width: 769px) {
+        .event-list > li {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 120px;
+            padding: 0px;
+        }
+        .event-list > li > time,
+        .event-list > li > img {
+            display: inline-block;
+        }
+        .event-list > li > time,
+        .event-list > li > img {
+            width: 120px;
+            float: left;
+        }
+        .event-list > li > .info {
+            background-color: rgb(245, 245, 245);
+            overflow: hidden;
+        }
+        .event-list > li > time,
+        .event-list > li > img {
+            width: 120px;
+            height: 120px;
+            padding: 0px;
+            margin: 0px;
+        }
+        .event-list > li > .info {
+            position: relative;
+            height: 120px;
+            text-align: left;
+            padding-right: 40px;
+        }
+        .event-list > li > .info > .title,
+        .event-list > li > .info > .desc {
+            padding: 0px 10px;
+        }
+        .event-list > li > .info > ul {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <h1><a href="../index.html">ISELTech'17</a></h1>
+        <nav id="nav">
+            <ul>
+                <li class="special">
+                    <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                    <div id="menu">
+                        <ul>
+                            <li><a href="index.html">Home</a>
+                            </li>
+                            <li class=""><a href="speakers.html">Speakers</a>
+                            </li>
+                            <li class="text-green"><a href="schedule.html">Schedule</a>
+                            </li>
+                            <li><a href="blog/sponsor.html"><strong>Sponsor us</strong></a>
+                            </li>
+                            <li class=""><a href="blog/callforpapers.html">Call for papers</a>
+                            </li>
+                            <!--<li e" class=""><a href="#">Send your CV</a></li>-->
+                            <hr>
+                            <li><a href="blog.html">Blog</a>
+                            </li>
+                            <li class=""><a href="team.html">Team</a>
+                            </li>
+                            <li class=""><a href="#cta">Contact</a>
+                            </li>
+                            <li class=""><a href="https://drive.google.com/drive/folders/0B-LnqCYP1RM3Vkl6WjRyaUg2U2s?usp=sharing">Media kit</a>
+                            </li>
+                            <hr>
+                            <li><a href="blog/tickets.html">Tickets</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main -->
+    <article id="blog">
+        <header>
+            <br>
+            <br>
+            <h2>Schedule</h2>
+            
+        </header>
+        <section class="wrapper style1 special">
+            <div class="container">
+                <h2>Schedule</h2>
+                <b><center>
+                <small><a href="http://www2.last2ticket.com/en/events/170/iseltech-17"> 
+                TICKETS Only until 25 Abril - EARLY BUY 25% DISCOUNT CODE - <strong>presale25</strong></a></small>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#25May">25 May</a>
+                    </li>
+                    <li><a data-toggle="tab" href="#26May">26 May</a>
+                    </li>
+                    <li><a data-toggle="tab" href="#27May">27 May</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="25May" class="tab-pane fade in active">
+                        <h3>25 May</h3>
+                        <h5>Cloud, 5G, Angular, NativeScript, Social</h5>
+                        <div class="row" id="25mayfile"></div>
+                        <!-- LOAD 25may -->
+                    </div>
+                    <div id="26May" class="tab-pane fade">
+                        <h3>26 May</h3>
+                        <h5>AR/VR, Android, Web, Social<br>
+                        <h4>Demos: HTCVive by <a href="http://www.mimicrygames.com/">MimicryGames</a> | HTCVive by <a href="http://thelisbonvr.com/">TheLisbonVR</a>  | Hololens by <a href="http://itpeople.pt/"></a>ITPeople</h5>
+                        <div class="row" id="26mayfile"></div>
+                        <!-- LOAD 26may -->
+                    </div>
+                    <div id="27May" class="tab-pane fade">
+                        <h3>27 May</h3>
+                        <h5>CiberSecurity & Future Day</h5>
+                        <div class="row" id="27mayfile"></div>
+                        <!-- LOAD 27may -->
+                    </div>
+                </div>
+            </div>
+           
+
+              
+        </section>
+
+
+        <br>
+        <br>
+    </article>
+    <!-- Footer -->
+    <footer id="footer" class="major">
+        <h2>Contacts</h2>
+        <ul class="icons">
+            <li>
+                <a href="https://facebook.com/iseltech"><img src="images\social\facebook.png" width="30px" alt="Fb">
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/@isel_tech17"><img src="images\social\twitter.png" width="30px" alt="twitter">
+                </a>
+            </li>
+            <li>
+                <a href="http://iseltech-slack.herokuapp.com/"><img src="images\social\slack.png" width="30px" alt="Slack">
+                </a>
+            </li>
+            <li>
+                <a href="https://telegram.me/iseltech"><img src="images\social\telegram.png" width="30px" alt="Telegram">
+                </a>
+            </li>
+        </ul>
+        <ul class="copyright">
+            <li>#ISELTech</li>
+            <li>iseltech[at]isel.pt</li>
+        </ul>
+    </footer>
+    <!-- Scripts -->
+    <script src="assets/js/accordion.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.min.js"></script>
+    <!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.min.js"></script>
+    <!--images effect -->
+    <script>
+    $("#25mayfile").load("25may.html");
+    </script>
+    <script>
+    $("#26mayfile").load("26may.html");
+    </script>
+    <script>
+    $("#27mayfile").load("27may.html");
+    </script>
+</body>
+
+</html>
